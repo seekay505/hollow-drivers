@@ -168,7 +168,7 @@ h3 {
 /* -------------------------- img start -------------------------- */
 .img-container {
   position: relative;
-  background-image: url("/public/imgs/band-photo.png");
+  background-image: url("public/imgs/band-photo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 50%;
