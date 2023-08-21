@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --neutral-black: #192127;
+  --neutral-white: #F5FBFF;
+  --primary: #5280A5;
+  --secondary: #26313A;
+  height: 100vh;
+  width: 100vw;
+
+  --nav-height: 4rem;
+  --nav-link-height: 3rem;
+  --nav-link-size: 1rem;
+  --nav-padding-bottom: 1rem;
+  --bar-width: 2.5rem;
+  --bar-height: .2rem;
+  --hamburger-gap: .3rem;
+
+  --section-padding-vertical: 3rem;
+}
+
+/* ------------------------ CSS Reset start ------------------------ */
+html {
+  box-sizing: border-box;
+  /* font-size: 16px; */
+  font-size: 100%;
+  font-family: 'Aoboshi One', serif;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------ CSS Reset end ------------------------ */
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.wrapper {
+  height: 100%;
+  background-color: var(--neutral-black);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+/* -------------------------- nav start -------------------------- */
+
+/* ------------------------ hamburger start --------------------- */
+.hamburger-menu {
+  position: absolute;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+  /* outline: 2px solid red; */
+}
+.bar {
+  background-color: var(--neutral-white);
+  width: var(--bar-width);
+  height: var(--bar-height);
+  margin: var(--hamburger-gap);
+}
+.bar:first-child {
+  margin-top: 0;
+}
+.bar:last-child {
+  margin-bottom: 0;
+}
+.link-list {
+  /* height: var(--nav-link-height); */
+}
+.nav {
+  background-color: var(--neutral-black);
+  height: var(--nav-height);
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: flex-end;
+  width: 100%;
+  /* padding-bottom: var(--nav-padding-bottom); */
+  z-index: 2;
+}
+.nav-container {
+  z-index: 1;
+  height: 0;
+}
+.link-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: calc(-3 * var(--nav-link-height));
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  transition-property: translate;
+}
+.link-list.active {
+  translate: 0 calc(3 * var(--nav-link-height));
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  transition-property: translate;
+}
+.link {
+  height: var(--nav-link-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--secondary);
+  border-bottom: 1px solid var(--neutral-white);
+}
+.link:last-child {
+  border-bottom: none;
+}
+.link a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--neutral-white);
+}
+/* -------------------------- hamburger end ------------------------- */
+
+.btn {
+  text-decoration: none;
+  color: var(--neutral-white);
+  border: 1px solid var(--neutral-white);
+  border-radius: .5em;
+  padding: .5em;
+}
+.contact {
+  position: absolute;
+  right: 1rem;
+}
+/* -------------------------- nav end -------------------------- */
+
+/* -------------------------- img start -------------------------- */
+.img-container {
+  position: relative;
+  background-image: url("/public/imgs/band-photo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  height: calc(20rem + 15vw);
+  max-height: 100rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* outline: solid red 2px; */
+}
+
+.title-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -1em;
+  /* outline: solid orange 10px; */
+}
+
+.title {
+  font-family: 'Alfa Slab One', sans-serif;
+  width: min-content;
+  color: var(--neutral-white);
+  opacity: 50%;
+}
+
+.logo {
+  opacity: 50%;
+  width: 12rem;
+  align-self: center;
+}
+
+.social-media-list {
+  width: 100%;
+  padding: 1rem 2rem;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* outline: 2px solid pink; */
+}
+
+.social-media-link {
+  width: 2rem;
+  opacity: 50%;
+}
+/* -------------------------- img end -------------------------- */
+
+/* -------------------------- releases start -------------------------- */
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: white; */
+}
+.container {
+  margin: 0 2em;
+  padding-top: var(--section-padding-vertical);
+  padding-bottom: var(--section-padding-vertical);
+  /* background-color: green; */
+}
+.releases-section {
+
+}
+.section-title {
+  margin-bottom: 1em;
+  text-align: center;
+}
+.releases-title {
+  color: var(--neutral-white);
+  /* padding-left: 1em; */
+}
+.grid-container {
+  margin: 0 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* background-color: red; */
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3em;
+  /* background-color: orange; */
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.card:last-child {
+  margin-bottom: 0;
+  /* outline: 10px solid red; */
+}
+.card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.card-img {
+  max-width: 15rem;
+}
+.song-title {
+  color: var(--neutral-white);
+  width: max-content;
+  margin-top: 1em;
+  background-color: var(--primary);
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5em 1em;
+  border-radius: 9999px;
+}
+/* -------------------------- releases end -------------------------- */
+
+/* -------------------------- shows start -------------------------- */
+.shows-section {
+  background-color: var(--neutral-white);
+  color: var(--neutral-black);
+}
+.shows-container {
+  /* padding-left: 3rem;
+  padding-right: 3rem; */
+}
+.shows-section-title {
+  text-align: center;
+}
+.show-card p {
+  font-family: "Inter", sans-serif;
+}
+.show-title {
+  text-align: center;
+  margin: .75em;
+}
+.show-card {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.show-card:last-child {
+  margin-bottom: 0;
+  /* background-color: red; */
+}
+.logistics {
+  margin-bottom: .75rem;
+}
+.bold {
+  font-weight: bold;
+}
+.show-img {
+  border-radius: 1rem;
+  max-width: minmax(20rem, 100%);
+}
+.where-container {
+  display: flex;
+}
+/* -------------------------- shows end -------------------------- */
+
+/* -------------------------- about start -------------------------- */
+.about-section {
+  color: var(--neutral-white);
+}
+.about-header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-img {
+  border-radius: 16px;
+}
+.about-subheading {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+.profiles-container {
+  margin-top: 2rem;
+}
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.profile-card:last-child {
+  margin-bottom: 0;
+}
+.profile-img-container {
+  width: 10rem;
+}
+.profile-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-name {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+.profile-paragraph {
+  font-size: .9rem;
+  font-family: "Inter", sans-serif;
+}
+/* -------------------------- about end -------------------------- */
+
+/* -------------------------- contact start -------------------------- */
+.rule {
+  width: 100%;
+  height: 5px;
+  background-color: var(--neutral-white);
+}
+.contact-section {
+  color: var(--neutral-white);
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  max-width: 40rem;
+}
+.contact-element {
+  margin-top: 2rem;
+}
+.contact-title {
+
+}
+.contact-email {
+  font-family: "Inter", sans-serif;
+}
+.contact-phone-number {
+  font-family: "Inter", sans-serif;
+}
+.contact-social-media-list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  /* background-color: orange; */
+}
+/* -------------------------- contact end -------------------------- */
+
+/* -------------------------- footer starter -------------------------- */
+.footer-section {
+  color: var(--neutral-white);
+}
+.footer-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-text {
+  font-size: .8rem;
+  font-family: "Inter", sans-serif;
+}
+.footer-link {
+  color: var(--neutral-white)
+}
+/* -------------------------- footer end -------------------------- */
+
+/* -------------------------- responsive start -------------------------- */
+@media (min-width: 600px) {
+  /* ------------------------ hamburger start --------------------- */
+  .hamburger-menu {
+    display: none;
+  }
+  .nav-container {
+    position: static;
+    height: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 3;
+    background-color: green;
+  }
+  .link-list {
+    position: absolute;
+    top: calc((var(--nav-height) / 2) - var(--nav-link-size) * 1.25);
+    flex-direction: row;
+    width: 25rem;
+    /* background-color: red; */
+  }
+  .link {
+    background-color: transparent;
+    border: none;
+  }
+  /* ------------------------ hamburger end --------------------- */
+}
+
+@media (max-width: 300px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 600px) {
+  /* ------------------------ about start --------------------- */
+  .about-subheading {
+    font-size: 2rem;
+    padding: 2.5rem;
+    max-width: 55rem;
+  }
+  /* ------------------------ about end --------------------- */
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 60rem;
+  }
+  .shows-container {
+    max-width: 40rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 60rem;
+  }
+  .shows-container {
+    max-width: 40rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* -------------------------- releases start -------------------------- */
+  .grid-container {
+    margin: 0;
+    display: grid;
+    /* grid-template-columns: repeat(3, minmax(33%, 1fr)); */
+    grid-template-columns: repeat(3, minmax(auto, 25rem));
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5%;
+    /* background-color: red; */
+  }
+  /* -------------------------- releases end -------------------------- */
+
+  /* -------------------------- shows start -------------------------- */
+  .shows-container {
+    max-width: 60rem;
+  }
+  .show-card {
+    flex-direction: row;
+  }
+  .left-show-card .show-img {
+    order: 2;
+  }
+  .left-show-card .show-copy {
+    margin-right: 2rem;
+  }
+  .right-show-card .show-copy {
+    margin-left: 2rem;
+  }
+  .show-img {
+    max-width: 40%;
+  }
+  .show-title {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* -------------------------- shows end -------------------------- */
+
+  /* -------------------------- about start -------------------------- */
+  .container {
+    max-width: 70rem;
+  }
+  .about-container {
+    max-width: 80rem;
+  }
+  .profile-card {
+    flex-direction: row;
+    /* background-color: red; */
+    justify-content: space-evenly;
+  }
+  .profile-img-container {
+    display: flex;
+    flex-grow: 1;
+    max-width: 20rem;
+  }
+  .left-profile-card .profile-img-container {
+    order: 2;
+  }
+  .right-profile-card .profile-copy {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    /* background-color: green; */
+  }
+  .left-profile-card .profile-copy {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    /* background-color: green; */
+  }
+  .profile-copy {
+    max-width: 60%;
+    align-items: flex-start;
+  }
+  .profile-name {
+    text-align: right;
+  }
+  /* -------------------------- about end -------------------------- */
+}
+
+/* -------------------------- responsive end -------------------------- */
+
+/* .about-header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-img {
+  border-radius: 16px;
+}
+.about-subheading {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+} */
